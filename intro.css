@@ -1,45 +1,46 @@
 .jumbotron {
-    width:1200px;
-    height:500px;
-    margin:30px;
-    margin-top:60px;
+    width: 1200px;
+    height: 500px;
+    margin: 30px;
+    margin-top: 60px;
 }
 
 #title {
-    text-align:center;
-    font-size:70px;
+    text-align: center;
+    font-size: 70px;
 }
 
-#startGame{
-    margin-top:50px;
+#startGame {
+    margin-top: 50px;
 }
 
-#directions{
-    font-size:20px;
-    margin:20px;
+#directions {
+    font-size: 20px;
+    margin: 20px;
 }
 
-h2{
-    margin:20px;
+h2 {
+    margin: 20px;
 }
 
-#button:hover{
-    color:black;
-    background-color:gray;
+#button:hover {
+    color: black;
+    background-color: gray;
     transition: 1s;
-    height:100px;
-    font-size:50px;
+    height: 100px;
+    font-size: 50px;
 }
 
 /* FOR ANIMATED LETTERS*/
+
 .ml15 {
-  font-weight: 800;
-  font-size: 3.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
 }
 
 .ml15 .word {
-  display: inline-block;
-  line-height: 1em;
+    display: inline-block;
+    line-height: 1em;
 }

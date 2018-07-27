@@ -13,55 +13,74 @@
     <a-scene>
         <!-- IMAGES/SOUNDS HERE -->
         <a-assets>
-            <audio src="audio/hammersound.mp3" id="hammersound"></audio>
-
+            <audio src="audio/hammersound.mp3" id="hammerSound">
+            <img src='images/woodfloor.jpg' id='woodFloor'>
+            </audio>
         </a-assets>
 
         <a-entity>
-            <a-camera id="player" position='0 0 0' camera universal-controls kinematic-body position>
+            <a-camera id="player" camera universal-controls kinematic-body position>
                 <!--HAMMER-->
-                <a-entity id="hammerStriker" static-body position='1.5 -.5 -4' rotation="0 180 0" gblock='https://poly.google.com/view/fRKx5yhenzR' id='hammer'>
-                    <a-animation begin="hit" attribute="rotation" from="0 180 0" to="90 180 0" repeat="1" direction="alternate" dur="500"></a-animation>
+                <a-entity id="hammerStriker" static-body position='1.3 -2 -1.5' rotation="0 180 0" gblock='https://poly.google.com/view/fRKx5yhenzR'>
+                    <a-animation begin="swing" attribute="rotation" from="0 180 0" to="90 180 0" repeat="1" direction="alternate" dur="500">
 
+                    </a-animation>
                 </a-entity>
             </a-camera>
         </a-entity>
 
         <!--PLANE-->
-        <a-plane static-body position="0 0 0 " rotation="-90 0 0 " width="100 " height="100 " color="#AED6F1"></a-plane>
+        <a-plane src='#woodFloor' static-body position="0 0 0 " rotation="-90 0 0 " width="50 " height="50 " color="#AED6F1"></a-plane>
 
         <!-- BACKGROUND -->
-        <a-sky color="#FDEBD0"></a-sky>
-        
+        <a-sky color="beige"></a-sky>
+
         <!-- CUBICLE -->
-        <a-entity data-cloud9-id="70" gblock="https://poly.google.com/view/9oZP4harYcp" id="cubicle" position="-6.225 0 -13.451"></a-entity>
-        
+        <a-entity data-cloud9-id="19" gblock="https://poly.google.com/view/9oZP4harYcp" id="cubicle" position="-13.448 0 -13.451"></a-entity>
+        <a-box static-body opacity='0' position='-13.448 0 -13.451' width='5px' height='10px' depth='10px'></a-box>
+      
         <!-- PEOPLE -->
-        <a-entity data-cloud9-id="46" gblock="https://poly.google.com/view/cCoBu3f4wuZ" id="people" position="-9.87 0.842 3.407"></a-entity>
-        <!--<a-entity gblock="https://poly.google.com/view/9oZP4harYcp" id="cubicle" ></a-entity>-->
+        <a-entity data-cloud9-id="20" gblock="https://poly.google.com/view/cCoBu3f4wuZ" id="people" position="11.213 0.705 -8.38" rotation="0 180 0"></a-entity>      
 
         <!--TYPEWRITER TO SMASH-->
-        <a-entity data-cloud9-id="67" static-body="sphereRadius:NaN" position="0 0 0" gblock="https://poly.google.com/view/2SmAWPS6_mH" id="typeWriter"></a-entity>        
+        <a-entity data-cloud9-id="67" static-body="sphereRadius:NaN" position="-1 0 -3" gblock="https://poly.google.com/view/2SmAWPS6_mH" id="typewriter" >
+            
+        </a-entity>
         
         <!-- OFFICE CHAIR-->
-        <a-entity data-cloud9-id="52" gblock="https://poly.google.com/view/3txPAhYeu-x" id="chair" position="-6.062 -0.376 -11.189"></a-entity>
+        <a-entity data-cloud9-id="23" gblock="https://poly.google.com/view/3txPAhYeu-x" id="chair" position="-13.386 -0.376 -11.189"></a-entity>
         
         <!-- PRINTER -->
-        <a-entity glock="https://poly.google.com/view/bgNnmejxBa-" id="printer" position="0 0 0"></a-entity>
+        <a-entity gblock="https://poly.google.com/view/bgNnmejxBa-" id="printer" position="-0.689 -0.55 -11.746"></a-entity>
         
         <!-- CALCULATOR -->
-        <a-entity glock="https://poly.google.com/view/0yU6BDQRVYw" id="calculator" position="0 0 0"></a-entity>
+        <a-entity data-cloud9-id="115" gblock="https://poly.google.com/view/0yU6BDQRVYw" id="calculator" position="-9.893 0.073 -6.766" scale="0.25 0.5 0.25"></a-entity>
+        <a-box static-body opacity='0' position="-9.893 0.073 -6.766"></a-box>
         
-        <!-- PAPER PLANES -->
-        <a-entity glock="https://poly.google.com/view/5mGcr5GzLT5" id="paperplanes" position="0 0 0"></a-entity>
+        <!-- READING THE NEWS -->
+        <a-entity data-cloud9-id="27" position="-8.099 0.28 -12.622" gblock="https://poly.google.com/view/eHaCAJk_cNQ" id="sitting"></a-entity>
+       
+        <!-- WALL DESK -->
+        <a-entity data-cloud9-id="34" gblock="https://poly.google.com/view/4U4lI91VbsO" id="walldesk" position="-10.962 0.899 0.278" rotation="0 -270 0" scale="0.08 0.06 0.08"></a-entity>        
+         
+        <!-- BIG DESK -->
+        <a-entity data-cloud9-id="36" gblock="https://poly.google.com/view/1OdV8ponZWb" id="bigdesk" position="-29.553 -0.206 2.061" rotation="270 0 0" scale="3 3 3"></a-entity>
+       
+        <!-- DESK W/PAPER PLANES -->
+        <a-entity data-cloud9-id="75" gblock="https://poly.google.com/view/aZr0ZvdY_8n" id="paperplanes" position="-9.091 1.525 11.669" scale="2 2 2"></a-entity>
+        
+        <!-- WALLS -->
+        <a-box id="wall1" data-cloud9-id="28" color="#006666" width="5" height="5" depth="3" position="-0.047 2.5 -14.55" static-body="sphereRadius:NaN" geometry="width:30;depth:1"></a-box>
+        <a-box id="wall2" data-cloud9-id="30" color="#006666" width="5" height="5" depth="3" position="0.018 2.5 14.397" static-body="sphereRadius:NaN" geometry="depth:1;width:30"></a-box>
+        <a-box id="wall3" data-cloud9-id="29" color="#006666" width="5" height="5" depth="3" position="-15.155 2.5 -0.186" static-body="sphereRadius:NaN" geometry="depth:1;width:30" rotation="0 90 0"></a-box>
 
 
-
+        
 
     </a-scene>
 </body>
 
-<script type="text/javascript " src="game.js "></script>
-</body>
+<script type="text/javascript " src="game.js"></script>
+
 
 </html>
